@@ -20,6 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # whenever going to this empty string, it forwards all of the different URLs or routes (ben trong myapp.urls)
+    path("", include("api.urls")),
     path("myapp/", include("myapp.urls")),
     path("api/", include("api.urls"))
 ]
